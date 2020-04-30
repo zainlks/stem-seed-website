@@ -8635,6 +8635,15 @@ h1, h2, h3, h4, h5,
     color: #fff;
     line-height: 1.2;
     font-size: 18px; }
+    .gallery video {
+      display: block;
+      top: 0px;
+      right: 0px;
+      height: fill;
+      width: 100%;
+      z-index: 0;
+      position: absolute;
+    }
     .gallery h2 a {
       color: #fff; }
   .gallery .desc {
