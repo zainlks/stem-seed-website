@@ -466,7 +466,15 @@ pre {
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
-  margin-left: auto; }
+  margin-left: auto;
+}
+
+.container-fluid .new-class-session {
+  background-color: white;
+  text-align: center;
+  margin-top: 0 auto;
+  
+}
 
 .row {
   display: -webkit-box;
@@ -3501,6 +3509,7 @@ input[type="button"].btn-block {
   white-space: nowrap; }
   .navbar-brand:hover, .navbar-brand:focus {
     text-decoration: none; }
+
 
 .teacher-title {
   display: inline-block;
