@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>STEM SEED - Home</title>
+    <title>Intro to Programming</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
 
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
@@ -22,16 +19,16 @@
 
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" type = "text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-
+    <?php include './functions.php'; ?>
     <div class="container pt-5 pb-4">
 			<div class="row justify-content-between">
 				<div class="col-md-8 order-md-last">
 					<div class="row">
 						<div class="col-md-6 text-center">
-							<a class="navbar-brand" href="index.html">STEM<span>SEED</span></a>
+							<a class="navbar-brand" href="index.php">STEM<span>SEED</span></a>
 						</div>
 						<!-- <div class="col-md-6 d-md-flex justify-content-end mb-md-0 mb-3">
               <div class = "social-media">
@@ -69,19 +66,61 @@
 	  </nav>
     <!-- END nav -->
 
-    <div class="hero-wrap js-fullheight" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
-          <div class="col-md-8 ftco-animate">
-          	<h1>Registration Successful </h1>
-            <h2 class="subheading">Thank you for registering, you'll recieve an email shortly to confirm details.</h2>
-            <p><a href="./index.html" class="btn btn-primary mr-md-4 py-2 px-4">Go Home <span class="ion-ios-arrow-forward"></span></a><a href="./register.html" class="btn btn-primary mr-md-4 py-2 px-4">Register Another Child <span class="ion-ios-arrow-forward"></span></a></p>
-            <!-- <p><a href="#online-class" class="btn btn-secondary mr-md-4 py-2 px-4">Covid 19 Update <span class="ion-ios-arrow-forward"></span></a></p> -->
-          </div>
-        </div>
-      </div>
-    </div>
+
+		<section class="ftco-section ftco-no-pt ftco-no-pb">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-lg-3 py-5 order-md-last">
+	          <div class="heading-section ftco-animate">
+	          	<span class="subheading">Classes</span>
+	            <h2 class="mb-4">Coding Contest Preperation</h2>
+	            <p>This class prepares you for the Canadian Computing Contest through programming challenges, guided question solving and relevant data structures and algorithms.</p>
+              <?php checkClassav('Coding Contest Preperation') ?>
+	          </div>
+    			</div>
+    			<div class="col-lg-9 services-wrap px-4 pt-5">
+    				<div class="row pt-md-3">
+    					<div class="col-md-4 d-flex align-items-stretch">
+		    				<div class="services text-center">
+		    					<div class="icon d-flex justify-content-center align-items-center">
+		    						<img class="flaticon-fence" src = "./assets/calendar.png" height = "50px">
+		    					</div>
+		    					<div class="text">
+		    						<h3>6 Weeks</h3>
+		    						<p>2 hour sessions <br>Once a week <br><strong>DAY AND TIME TBD</strong></p>
+		    					</div>
+		    					<!-- <a href="#" class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></a> -->
+		    				</div>
+		    			</div>
+		    			<div class="col-md-4 d-flex align-items-stretch">
+		    				<div class="services text-center">
+		    					<div class="icon d-flex justify-content-center align-items-center">
+		    						<img class="flaticon-lawn-mower" src = "./assets/business.png" height = "60px">
+		    					</div>
+		    					<div class="text">
+		    						<h3>Solving Coding Challenges</h3>
+		    						<p>Through teacher and independently guided sessions, work through solving past problems of the Canadian Computing Competition</p>
+		    					</div>
+		    					<!-- <a href="#" class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></a> -->
+		    				</div>
+		    			</div>
+		    			<div class="col-md-4 d-flex align-items-stretch">
+		    				<div class="services text-center">
+		    					<div class="icon d-flex justify-content-center align-items-center">
+		    						<img class="flaticon-natural-resources" src = "./assets/network.png" height = "60px">
+		    					</div>
+		    					<div class="text">
+		    						<h3>Learn Relevant Structures and Algorithms</h3>
+		    						<p>Learn the relevant structures and theories behind how to solve each problem and when to use them.</p>
+		    					</div>
+		    					<!-- <a href="#" class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></a> -->
+		    				</div>
+		    			</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </section>
 
     <footer class="ftco-footer ftco-bg-dark ftco-section">
       <div class="container">
@@ -91,9 +130,9 @@
               <h2 class="logo"><a href="#">STEM <span>SEED</span></a></h2>
               <p>Helping bridge the STEM gap one step at a time.</p>
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-                <li class="ftco-animate"><a href="#"><span class="icon-linkedin "></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.linkedin.com/company/stem-seed"><span class="icon-linkedin "></span></a></li>
+                <li class="ftco-animate"><a href="https://www.facebook.com/pages/category/Nonprofit-Organization/STEM-Seed-104947514202070/"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.instagram.com/stemseedorg/"><span class="icon-instagram"></span></a></li>
               </ul>
             </div>
           </div>
@@ -101,8 +140,8 @@
             <div class="ftco-footer-widget mb-4 ml-md-5">
               <h2 class="ftco-heading-2">Classes</h2>
               <ul class="list-unstyled">
-                <li><a href="./intro-to-programming.html" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Introduction to Programming (Scratch)</a></li>
-                <li><a href="./senior-programming" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Senior Programming (Python)</a></li>
+                <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Introduction to Programming (Scratch)</a></li>
+                <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Senior Programming (Python)</a></li>
                 <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>English</a></li>
                 <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Mathematics</a></li>
                 <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Introduction to Business</a></li>
@@ -112,29 +151,29 @@
           </div>
           <div class="col-md-6 col-lg">
             <div class="ftco-footer-widget mb-4">
-            	<h2 class="ftco-heading-2">Contact information</h2>
-            	<div class="block-23 mb-3">
-	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">Ontario, Canada</span></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">team@stemseed.org</span></a></li>
-	              </ul>
-	            </div>
+              <h2 class="ftco-heading-2">Contact information</h2>
+              <div class="block-23 mb-3">
+                <ul>
+                  <li><span class="icon icon-map-marker"></span><span class="text">Ontario, Canada</span></li>
+                  <li><a href="#"><span class="icon icon-envelope"></span><span class="text">team@stemseed.org</span></a></li>
+                </ul>
+              </div>
             </div>
           </div>
           <!-- <div class="col-md-6 col-lg">
              <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">Business Hours</h2>
               <div class="opening-hours">
-              	<h4>Opening Days:</h4>
-              	<p class="pl-3">
-              		<span>Monday – Friday : 9am to 20 pm</span>
-              		<span>Saturday : 9am to 17 pm</span>
-              	</p>
-              	<h4>Vacations:</h4>
-              	<p class="pl-3">
-              		<span>All Sunday Days</span>
-              		<span>All Official Holidays</span>
-              	</p>
+                <h4>Opening Days:</h4>
+                <p class="pl-3">
+                  <span>Monday – Friday : 9am to 20 pm</span>
+                  <span>Saturday : 9am to 17 pm</span>
+                </p>
+                <h4>Vacations:</h4>
+                <p class="pl-3">
+                  <span>All Sunday Days</span>
+                  <span>All Official Holidays</span>
+                </p>
               </div>
             </div>
           </div> -->

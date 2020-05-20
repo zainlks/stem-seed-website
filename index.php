@@ -205,7 +205,7 @@
 		            		<!-- <div class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></div> -->
 		            	</a>
 
-                  <a href="./senior-programming.php" class="<?php checkClassav('Coding Contest Preperation');?>">Coding Contest Preperation
+                  <a href="./coding-contest-prep.php" class="<?php checkClassav('Coding Contest Preperation');?>">Coding Contest Preperation
 		            		<!-- <div class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></div> -->
 		            	</a>
 

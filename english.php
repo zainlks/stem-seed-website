@@ -57,9 +57,9 @@
 	        <ul class="navbar-nav m-auto">
             <li class="nav-item"><a href="./index.php" class="nav-link">Home</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">About us</a></li>
-            <li class="nav-item active"><a href="./index.html#online-class" class="nav-link">Online Classes</a></li>
+            <li class="nav-item active"><a href="./index.php#online-class" class="nav-link">Online Classes</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Projects</a></li>
-	          <li class="nav-item"><a href="./index.html#contact" class="nav-link">Contact</a></li>
+	          <li class="nav-item"><a href="./index.php#contact" class="nav-link">Contact</a></li>
 	        </ul>
 	      </div>
 	    </div>
