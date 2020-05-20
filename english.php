@@ -76,6 +76,7 @@
 	            <h2 class="mb-4">English</h2>
 	            <p>This class covers everything from recognizing text forms and stylistic elements in order to understand how they communicate meaning in text, to strengthening essay writing for various purposes and audiences.</p>
 	            <?php checkClassav('English') ?>
+              <p> <strong>Cost: $100 CAD <br> Grades: All grades </strong></p>
 	          </div>
     			</div>
     			<div class="col-lg-9 services-wrap px-4 pt-5">
@@ -87,7 +88,7 @@
 		    					</div>
 		    					<div class="text">
 		    						<h3>6 Weeks</h3>
-		    						<p>2 hour sessions <br>Once a week <br>Every <strong>Wednesday</strong><br> 5 - 7 p.m</p>
+		    						<p>2 hour sessions <br>Once a week <br>Every <strong>Wednesday</strong><br> 5 - 7 p.m<strong><br>Classes begin the week of June 15th</strong></p>
 		    					</div>
 		    					<!-- <a href="#" class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></a> -->
 		    				</div>

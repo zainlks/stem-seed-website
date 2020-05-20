@@ -77,6 +77,7 @@
 	            <p>This class covers all areas of math including number sense and numeration, patterning and algebra, geometry, and probability. It is loosely based on the Ontario curriculum for each grade, with online games and activities that can be done outside of the classroom built-in.</p>
 	            <!-- <p><a href="./register.html" class="btn btn-primary py-3 px-4">Availability: Register Now</a></p> -->
               <?php checkClassav('Mathematics') ?>
+              <p> <strong>Cost: $100 CAD <br> Grades: 3,4,7 and 8 </strong></p>
 	          </div>
     			</div>
     			<div class="col-lg-9 services-wrap px-4 pt-5">
@@ -88,7 +89,7 @@
 		    					</div>
 		    					<div class="text">
 		    						<h3>6 Weeks</h3>
-		    						<p>1 and a half hour sessions <br>Once a week <br>Every <strong>Mondays</strong><br> 11 a.m - 12:30 p.m</p>
+		    						<p>1 and a half hour sessions <br>Once a week <br>Every <strong>Mondays</strong><br> 11 a.m - 12:30 p.m<strong><br>Classes begin the week of June 15th</strong></p>
 		    					</div>
 		    					<!-- <a href="#" class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></a> -->
 		    				</div>

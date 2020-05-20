@@ -76,6 +76,7 @@
 	            <h2 class="mb-4">Intro to Programming</h2>
 	            <p>Introducing graphical programming using Scratch. With Scratch, you can program your own interactive stories, games and animations. Through this program students will be introduced to variables, sequencing and programming logic.</p>
               <?php checkClassav('Introduction to Programming') ?>
+              <p> <strong>Cost: $100 CAD <br> Grades: 3-5 </strong></p>
 	          </div>
     			</div>
     			<div class="col-lg-9 services-wrap px-4 pt-5">
@@ -87,7 +88,7 @@
 		    					</div>
 		    					<div class="text">
 		    						<h3>6 Weeks</h3>
-		    						<p>2 hour sessions <br>Once a week <br>Every <strong>Thursday</strong><br> 5 - 7 p.m</p>
+		    						<p>2 hour sessions <br>Once a week <br>Every <strong>Thursday</strong><br> 5 - 7 p.m<strong><br>Classes begin the week of June 15th</strong></p>
 		    					</div>
 		    					<!-- <a href="#" class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></a> -->
 		    				</div>

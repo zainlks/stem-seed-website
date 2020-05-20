@@ -77,6 +77,7 @@
 	            <p>The Intro to Business class focuses on building a foundation in basic economics, finance, marketing and management to give students a taste of the world of business. Students have the opportunity to explore real life examples and try their own hand at developing elevator pitches, marketing campaigns and studying the impacts of business in their own lives.</p>
 	            <!-- <p><a href="./register.html" class="btn btn-primary py-3 px-4">Availability: Register Now</a></p> -->
               <?php checkClassav('Introduction to Business') ?>
+              <p> <strong>Cost: $100 CAD <br> Grades: 6-8 </strong></p>
 	          </div>
     			</div>
     			<div class="col-lg-9 services-wrap px-4 pt-5">
@@ -88,7 +89,7 @@
 		    					</div>
 		    					<div class="text">
 		    						<h3>6 Weeks</h3>
-		    						<p>2 hour sessions <br>Once a week <br>Every <strong>Thursday</strong><br> 3 - 5 p.m</p>
+		    						<p>2 hour sessions <br>Once a week <br>Every <strong>Thursday</strong><br> 3 - 5 p.m<strong><br>Classes begin the week of June 15th</strong></p>
 		    					</div>
 		    					<!-- <a href="#" class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></a> -->
 		    				</div>

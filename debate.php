@@ -76,6 +76,7 @@
 	            <h2 class="mb-4">Debate and Public Speaking</h2>
 	            <p>Our Debate/Public Speaking class aims to build confidence and critical thinking in young students. The class works on developing argumentation and learning to analyse different stances on a variety of issues, and simultaneously improving organization, articulation and presence during public speaking.</p>
               <?php checkClassav('Debate and Public Speaking') ?>
+              <p> <strong>Cost: $100 CAD <br> Grades: 8 and up </strong></p>
 	          </div>
     			</div>
     			<div class="col-lg-9 services-wrap px-4 pt-5">
@@ -87,7 +88,7 @@
 		    					</div>
 		    					<div class="text">
 		    						<h3>6 Weeks</h3>
-		    						<p>2 hour sessions <br>Once a week <br>Every <strong>Friday</strong><br> 5 - 7 p.m</p>
+		    						<p>2 hour sessions <br>Once a week <br>Every <strong>Friday</strong><br> 5 - 7 p.m<strong><br>Classes begin the week of June 15th</strong></p>
 		    					</div>
 		    					<!-- <a href="#" class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></a> -->
 		    				</div>

@@ -116,7 +116,7 @@
           	<h1>STEM Education for everyone </h1>
             <p class="mb-4">Help close the STEM gap today</p>
             <p><a href="https://donorbox.org/stem-seed" class="btn btn-primary mr-md-4 py-2 px-4">Donate Now <span class="ion-ios-arrow-forward"></span></a></p>
-            <p><a href="#online-class" class="btn btn-secondary mr-md-4 py-2 px-4">Covid 19 Update <span class="ion-ios-arrow-forward"></span></a></p>
+            <p><a href="#online-class" class="btn btn-secondary mr-md-4 py-2 px-4">New Online Classes! <span class="ion-ios-arrow-forward"></span></a></p>
           </div>
         </div>
       </div>
