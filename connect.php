@@ -41,8 +41,15 @@ $headers = "From: team@stemseed.org\r\nReply-To: team@stemseed.org";
 //send the email
 mail( $email, $subject, $message, $headers );
 // //if the message is sent successfully print "Mail sent". Otherwise print "Mail failed"
+
+}
+else{
+echo "Error: ". $sql ."
+". $conn->error;
+}
+$sql = "UPDATE classList SET studentNum = studentNum + 1 WHERE className = '$subjectClass'";
+if ($conn->query($sql)){
 header("Location: http://www.stemseed.org/success.html");
-exit();
 }
 else{
 echo "Error: ". $sql ."

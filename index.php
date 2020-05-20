@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <title>STEM SEED - Home</title>
-    <meta http-equiv = "refresh" content = "0; url = ./index.php" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
@@ -26,6 +25,44 @@
     <link rel="stylesheet" type = "text/css" href="css/style.css">
   </head>
   <body>
+
+    <?php
+    $host = "localhost";
+    $dbusername = "stemseed_zain";
+    $dbpassword = "alza1302";
+    $dbname = "stemseed_signupClasses";
+
+    // Create connection
+
+    function checkClassav($className) {
+        $conn = new mysqli ($host, 'stemseed_zain', 'alza1302', 'stemseed_signupClasses');
+
+
+                  if (mysqli_connect_error()){
+                  die('Connect Error ('. mysqli_connect_errno() .') '
+                  . mysqli_connect_error());
+                  }
+                  else{
+                  $sql = "SELECT studentNum FROM classList WHERE className =". "'$className'";
+                  if ($results = $conn->query($sql)){
+                      $classSize = mysqli_fetch_array($results);
+                      $classSize = $classSize[0];
+                  // //if the message is sent successfully print "Mail sent". Otherwise print "Mail failed"
+                    if($classSize >= 7) {
+                      echo('services-list full-class');
+                    }
+                    else {
+                      echo('services-list');
+                    }
+                  }
+                  else {
+                      echo $conn->error;
+                  }
+                }
+    }
+
+     ?>
+
 
     <div class="container pt-5 pb-4">
 			<div class="row justify-content-between">
@@ -157,22 +194,22 @@
 		            <h2 class="mb-4">Online Classes</h2>
 		            <p>Introducing online distance learning from STEM SEED! Classes offered can be seen below. Click on any to register and get more information on the class. <br> <strong>Note: Classes in red are full.</strong></p>
 		            <div class="services-wrap">
-		            	<a href="./intro-to-programming.html" class="services-list full-class">Introduction to Programming (Scratch)
+		            	<a href="./intro-to-programming.html" class="<?php checkClassav('Introduction to Programming');?>">Introduction to Programming (Scratch)
 		            		<!-- <div class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></div> -->
 		            	</a>
-		            	<a href="./senior-programming.html" class="services-list full-class">Senior Programming (Python)
+		            	<a href="./senior-programming.html" class="<?php checkClassav('Senior Programming');?>">Senior Programming (Python)
 		            		<!-- <div class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></div> -->
 		            	</a>
-		            	<a href="./english.html" class="services-list full-class">English
+		            	<a href="./english.html" class="<?php checkClassav('English');?>">English
 		            		<!-- <div class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></div> -->
 		            	</a>
-		            	<a href="./math.html" class="services-list full-class">Mathematics
+		            	<a href="./math.html" class="<?php checkClassav('Mathematics');?>">Mathematics
 		            		<!-- <div class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></div> -->
 		            	</a>
-		            	<a href="./intro-to-business.html" class="services-list full-class">Introduction to Business
+		            	<a href="./intro-to-business.html" class="<?php checkClassav('Introduction to Business');?>">Introduction to Business
 		            		<!-- <div class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></div> -->
 		            	</a>
-                  <a href="#" class="services-list full-class">Debate and Public Speaking
+                  <a href="#" class="<?php checkClassav('Debate and Public Speaking');?>">Debate and Public Speaking
                   </a>
 		            </div>
 		          </div>
