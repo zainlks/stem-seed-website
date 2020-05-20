@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Mathematics</title>
+    <title>Intro to Programming</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-
+    <?php include './functions.php'; ?>
     <div class="container pt-5 pb-4">
 			<div class="row justify-content-between">
 				<div class="col-md-8 order-md-last">
@@ -55,11 +55,11 @@
 	      </button>
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav m-auto">
-	        	<li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="./index.php" class="nav-link">Home</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">About us</a></li>
             <li class="nav-item active"><a href="./index.html#online-class" class="nav-link">Online Classes</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Projects</a></li>
-	          <li class="nav-item"><a href="./index.html#contact" class="nav-link">Contact</a></li>
+	          <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
 	        </ul>
 	      </div>
 	    </div>
@@ -73,10 +73,9 @@
     			<div class="col-lg-3 py-5 order-md-last">
 	          <div class="heading-section ftco-animate">
 	          	<span class="subheading">Classes</span>
-	            <h2 class="mb-4">Intro to Business</h2>
-	            <p>The Intro to Business class focuses on building a foundation in basic economics, finance, marketing and management to give students a taste of the world of business. Students have the opportunity to explore real life examples and try their own hand at developing elevator pitches, marketing campaigns and studying the impacts of business in their own lives.</p>
-	            <!-- <p><a href="./register.html" class="btn btn-primary py-3 px-4">Availability: Register Now</a></p> -->
-               <p><a href="#" class="btn btn-danger py-3 px-4"  onclick="return confirm('This class has been completely filled, look out for a new session in June 2020')">Availability: Full</a></p>
+	            <h2 class="mb-4">Debate and Public Speaking</h2>
+	            <p>Our Debate/Public Speaking class aims to build confidence and critical thinking in young students. The class works on developing argumentation and learning to analyse different stances on a variety of issues, and simultaneously improving organization, articulation and presence during public speaking.</p>
+              <?php checkClassav('Debate and Public Speaking') ?>
 	          </div>
     			</div>
     			<div class="col-lg-9 services-wrap px-4 pt-5">
@@ -88,7 +87,7 @@
 		    					</div>
 		    					<div class="text">
 		    						<h3>6 Weeks</h3>
-		    						<p>2 hour sessions <br>Once a week <br>Every <strong>Thursday</strong><br> 3 - 5 p.m</p>
+		    						<p>2 hour sessions <br>Once a week <br>Every <strong>Friday</strong><br> 5 - 7 p.m</p>
 		    					</div>
 		    					<!-- <a href="#" class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></a> -->
 		    				</div>
@@ -96,11 +95,11 @@
 		    			<div class="col-md-4 d-flex align-items-stretch">
 		    				<div class="services text-center">
 		    					<div class="icon d-flex justify-content-center align-items-center">
-		    						<img class="flaticon-lawn-mower" src = "./assets/graph.png" height = "60px">
+		    						<img class="flaticon-lawn-mower" src = "./assets/globe.png" height = "60px">
 		    					</div>
 		    					<div class="text">
-		    						<h3>Business Foundations</h3>
-		    						<p>Focuses on building a foundation in basic economics, finance, marketing and management to give students a taste of the world of business.</p>
+		    						<h3>Analyzing World Issues</h3>
+		    						<p>Learning to analyse different stances on a variety of issues (including international relations, social justice and more)</p>
 		    					</div>
 		    					<!-- <a href="#" class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></a> -->
 		    				</div>
@@ -108,11 +107,11 @@
 		    			<div class="col-md-4 d-flex align-items-stretch">
 		    				<div class="services text-center">
 		    					<div class="icon d-flex justify-content-center align-items-center">
-		    						<img class="flaticon-natural-resources" src = "./assets/agreement.png" height = "60px">
+		    						<img class="flaticon-natural-resources" src = "./assets/communications.png" height = "60px">
 		    					</div>
 		    					<div class="text">
-		    						<h3>Real Life Applications</h3>
-		    						<p>Students have the opportunity to explore real life examples and try their own hand at developing elevator pitches, marketing campaigns and studying the impacts of business in their own lives.</p>
+		    						<h3>Public Speaking Improvement</h3>
+		    						<p>Focuses on Improving organization, articulation and presence during public speaking.</p>
 		    					</div>
 		    					<!-- <a href="#" class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></a> -->
 		    				</div>

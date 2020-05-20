@@ -22,13 +22,13 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-
+    <?php include './functions.php'; ?>
     <div class="container pt-5 pb-4">
 			<div class="row justify-content-between">
 				<div class="col-md-8 order-md-last">
 					<div class="row">
 						<div class="col-md-6 text-center">
-							<a class="navbar-brand" href="index.html">STEM<span>SEED</span></a>
+							<a class="navbar-brand" href="index.php">STEM<span>SEED</span></a>
 						</div>
 						<!-- <div class="col-md-6 d-md-flex justify-content-end mb-md-0 mb-3">
               <div class = "social-media">
@@ -55,11 +55,11 @@
 	      </button>
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav m-auto">
-	        	<li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="./index.php" class="nav-link">Home</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">About us</a></li>
             <li class="nav-item active"><a href="./index.html#online-class" class="nav-link">Online Classes</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Projects</a></li>
-	          <li class="nav-item"><a href="./index.html#contact" class="nav-link">Contact</a></li>
+	          <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
 	        </ul>
 	      </div>
 	    </div>
@@ -73,9 +73,9 @@
     			<div class="col-lg-3 py-5 order-md-last">
 	          <div class="heading-section ftco-animate">
 	          	<span class="subheading">Classes</span>
-	            <h2 class="mb-4">English</h2>
-	            <p>This class covers everything from recognizing text forms and stylistic elements in order to understand how they communicate meaning in text, to strengthening essay writing for various purposes and audiences.</p>
-	            <p><a href="#" class="btn btn-danger py-3 px-4"  onclick="return confirm('This class has been completely filled, look out for a new session in June 2020')">Availability: Full</a></p>
+	            <h2 class="mb-4">Intro to Programming</h2>
+	            <p>Introducing graphical programming using Scratch. With Scratch, you can program your own interactive stories, games and animations. Through this program students will be introduced to variables, sequencing and programming logic.</p>
+              <?php checkClassav('Introduction to Programming') ?>
 	          </div>
     			</div>
     			<div class="col-lg-9 services-wrap px-4 pt-5">
@@ -87,7 +87,7 @@
 		    					</div>
 		    					<div class="text">
 		    						<h3>6 Weeks</h3>
-		    						<p>2 hour sessions <br>Once a week <br>Every <strong>Wednesday</strong><br> 5 - 7 p.m</p>
+		    						<p>2 hour sessions <br>Once a week <br>Every <strong>Thursday</strong><br> 5 - 7 p.m</p>
 		    					</div>
 		    					<!-- <a href="#" class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></a> -->
 		    				</div>
@@ -95,11 +95,11 @@
 		    			<div class="col-md-4 d-flex align-items-stretch">
 		    				<div class="services text-center">
 		    					<div class="icon d-flex justify-content-center align-items-center">
-		    						<img class="flaticon-lawn-mower" src = "./assets/search.png" height = "60px">
+		    						<img class="flaticon-lawn-mower" src = "./assets/user.png" height = "60px">
 		    					</div>
 		    					<div class="text">
-		    						<h3>Analyzing Texts</h3>
-		    						<p>Recognizing text forms and stylistic elements in order to understand how they communicate meaning in text.</p>
+		    						<h3>Experienced Teachers</h3>
+		    						<p>Taught by teachers with experience working with high-level programming and artistic design.</p>
 		    					</div>
 		    					<!-- <a href="#" class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></a> -->
 		    				</div>
@@ -107,11 +107,11 @@
 		    			<div class="col-md-4 d-flex align-items-stretch">
 		    				<div class="services text-center">
 		    					<div class="icon d-flex justify-content-center align-items-center">
-		    						<img class="flaticon-natural-resources" src = "./assets/book.png" height = "60px">
+		    						<img class="flaticon-natural-resources" src = "./assets/design.png" height = "60px">
 		    					</div>
 		    					<div class="text">
-		    						<h3>Essay Writing</h3>
-		    						<p>Strengthening essay writing for various purposes and audiences.</p>
+		    						<h3>Graphical programming</h3>
+		    						<p>Introducing graphical programming using Scratch. With Scratch, you can program your own interactive stories, games and animations.</p>
 		    					</div>
 		    					<!-- <a href="#" class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></a> -->
 		    				</div>

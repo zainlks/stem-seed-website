@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-
+    <?php include './functions.php'; ?>
     <div class="container pt-5 pb-4">
 			<div class="row justify-content-between">
 				<div class="col-md-8 order-md-last">
@@ -55,7 +55,7 @@
 	      </button>
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav m-auto">
-	        	<li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+	        	<li class="nav-item"><a href="./index.php" class="nav-link">Home</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">About us</a></li>
             <li class="nav-item active"><a href="./index.html#online-class" class="nav-link">Online Classes</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Projects</a></li>
@@ -76,7 +76,7 @@
 	            <h2 class="mb-4">Math</h2>
 	            <p>This class covers all areas of math including number sense and numeration, patterning and algebra, geometry, and probability. It is loosely based on the Ontario curriculum for each grade, with online games and activities that can be done outside of the classroom built-in.</p>
 	            <!-- <p><a href="./register.html" class="btn btn-primary py-3 px-4">Availability: Register Now</a></p> -->
-               <p><a href="#" class="btn btn-danger py-3 px-4"  onclick="return confirm('This class has been completely filled, look out for a new session in June 2020')">Availability: Full</a></p>
+              <?php checkClassav('Mathematics') ?>
 	          </div>
     			</div>
     			<div class="col-lg-9 services-wrap px-4 pt-5">

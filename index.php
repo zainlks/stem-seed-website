@@ -48,7 +48,7 @@
                       $classSize = mysqli_fetch_array($results);
                       $classSize = $classSize[0];
                   // //if the message is sent successfully print "Mail sent". Otherwise print "Mail failed"
-                    if($classSize >= 7) {
+                    if($classSize >= 6) {
                       echo('services-list full-class');
                     }
                     else {
@@ -69,7 +69,7 @@
 				<div class="col-md-8 order-md-last">
 					<div class="row">
 						<div class="col-md-6 text-center">
-							<a class="navbar-brand" href="index.html">STEM<span>SEED</span></a>
+							<a class="navbar-brand" href="index.php">STEM<span>SEED</span></a>
 						</div>
 						<!-- <div class="col-md-6 d-md-flex justify-content-end mb-md-0 mb-3">
               <div class = "social-media">
@@ -96,7 +96,7 @@
 	      </button>
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav m-auto">
-	        	<li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+	        	<li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">About us</a></li>
             <li class="nav-item"><a href="#online-class" class="nav-link">Online Classes</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Projects</a></li>
@@ -194,22 +194,36 @@
 		            <h2 class="mb-4">Online Classes</h2>
 		            <p>Introducing online distance learning from STEM SEED! Classes offered can be seen below. Click on any to register and get more information on the class. <br> <strong>Note: Classes in red are full.</strong></p>
 		            <div class="services-wrap">
-		            	<a href="./intro-to-programming.html" class="<?php checkClassav('Introduction to Programming');?>">Introduction to Programming (Scratch)
+		            	<a href="./intro-to-programming.php" class="<?php checkClassav('Introduction to Programming');?>">Introduction to Programming (Scratch)
 		            		<!-- <div class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></div> -->
 		            	</a>
-		            	<a href="./senior-programming.html" class="<?php checkClassav('Senior Programming');?>">Senior Programming (Python)
+		            	<a href="./senior-programming.php" class="<?php checkClassav('Senior Programming');?>">Senior Programming (Python)
 		            		<!-- <div class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></div> -->
 		            	</a>
-		            	<a href="./english.html" class="<?php checkClassav('English');?>">English
+
+                  <a href="./data_structures_algorithms.php" class="<?php checkClassav('Data Structures and Algorithms');?>">Data Structures and Algorithms
 		            		<!-- <div class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></div> -->
 		            	</a>
-		            	<a href="./math.html" class="<?php checkClassav('Mathematics');?>">Mathematics
+
+                  <a href="./senior-programming.php" class="<?php checkClassav('Coding Contest Preperation');?>">Coding Contest Preperation
 		            		<!-- <div class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></div> -->
 		            	</a>
-		            	<a href="./intro-to-business.html" class="<?php checkClassav('Introduction to Business');?>">Introduction to Business
+
+                  <a href="./senior-programming.php" class="<?php checkClassav('Virtual Robotics');?>">Virtual Robotics
 		            		<!-- <div class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></div> -->
 		            	</a>
-                  <a href="#" class="<?php checkClassav('Debate and Public Speaking');?>">Debate and Public Speaking
+
+
+		            	<a href="./english.php" class="<?php checkClassav('English');?>">English
+		            		<!-- <div class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></div> -->
+		            	</a>
+		            	<a href="./math.php" class="<?php checkClassav('Mathematics');?>">Mathematics
+		            		<!-- <div class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></div> -->
+		            	</a>
+		            	<a href="./intro-to-business.php" class="<?php checkClassav('Introduction to Business');?>">Introduction to Business
+		            		<!-- <div class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></div> -->
+		            	</a>
+                  <a href="./debate.php" class="<?php checkClassav('Debate and Public Speaking');?>">Debate and Public Speaking
                   </a>
 		            </div>
 		          </div>
