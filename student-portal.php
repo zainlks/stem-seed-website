@@ -72,7 +72,7 @@
     		<div class="row">
     			<div class="col-lg-3 py-5 order-md-last">
 	          <div class="heading-section ftco-animate">
-	          	<span class="subheading">Classes</span>
+	          	<span class="subheading">Welcome <?php echo("$username")?></span>
 	            <h2 class="mb-4">My Classes</h2>
 	          </div>
     			</div>

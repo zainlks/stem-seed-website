@@ -128,7 +128,41 @@
 		            	<?php
                   for($x=0;$x<count($classStudentList);$x++)
                   {
-                    echo("<a href=\"./intro-to-programming.php\" class=\"services-list\">$classStudentList[$x]</a>");
+                    $host = "localhost";
+                    $dbusername = "stemseed_zain";
+                    $dbpassword = "alza1302";
+                    $dbname = "stemseed_signupClasses";
+                    // Create connection
+                    $conn = new mysqli ($host, $dbusername, $dbpassword, $dbname);
+
+                    if (mysqli_connect_error()){
+                    die('Connect Error ('. mysqli_connect_errno() .') '
+                    . mysqli_connect_error());
+                    }
+                    else{
+                      $sql = "SELECT grade FROM"."`$subjectClass`"."WHERE name = '$classStudentList[$x]'";
+                      if ($results = $conn->query($sql)){
+                        $classGrade = mysqli_fetch_array($results);
+                        $classGrade = $classGrade[0];
+                        // $classList[] =  $classList['name'];
+                        // print_r($classList);
+                      }
+                      else {
+                        echo "no results";
+                      }
+                    }
+                    echo(
+                      "<a class=\"services-list\">
+                      $classStudentList[$x]
+                      <form action=\"./update-grade.php\" method=\"POST\">
+                      <p>Grade: <input type = \"text\" name=\"newGrade\" id = \"newGrade\" placeholder ='$classGrade'></p>
+                        <input type=\"hidden\" name=\"studentName\" id = \"studentName\" value=\"$classStudentList[$x]\">
+                        <input type=\"hidden\" name=\"className\" id = \"className\" value=\"$subjectClass\">
+                        <input type = \"submit\" class='btn btn-danger py-3 px-4' value = \"Update Grade\">
+                        </form>
+                        </a>"
+
+                    );
                   }
 
                   ?>
