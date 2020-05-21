@@ -8,7 +8,7 @@ $dbname = "stemseed_signupClasses";
 // Create connection
 
 function checkClassav($className) {
-    $conn = new mysqli ($host, 'stemseed_zain', 'alza1302', 'stemseed_signupClasses');
+    $conn = new mysqli ('localhost', 'stemseed_zain', 'alza1302', 'stemseed_signupClasses');
 
 
               if (mysqli_connect_error()){

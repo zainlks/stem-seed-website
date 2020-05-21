@@ -25,7 +25,7 @@
     <link rel="stylesheet" type = "text/css" href="css/style.css">
   </head>
   <body>
-
+    <?php session_start(); $subjectClass = $_SESSION['subjectClass']; $classStudentList = $_SESSION['classStudentList']; ?>
     <?php
     $host = "localhost";
     $dbusername = "stemseed_zain";
@@ -107,75 +107,6 @@
 	  </nav>
     <!-- END nav -->
 
-    <div class="hero-wrap js-fullheight" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
-          <div class="col-md-6 ftco-animate">
-          	<h2 class="subheading">Welcome to STEM SEED</h2>
-          	<h1>STEM Education for everyone </h1>
-            <p class="mb-4">Help close the STEM gap today</p>
-            <p><a href="https://donorbox.org/stem-seed" class="btn btn-primary mr-md-4 py-2 px-4">Donate Now <span class="ion-ios-arrow-forward"></span></a></p>
-            <p><a href="#online-class" class="btn btn-secondary mr-md-4 py-2 px-4">New Online Classes! <span class="ion-ios-arrow-forward"></span></a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <section class="ftco-section ftco-no-pt">
-    	<div class="container">
-    		<div class="row">
-    			<div class="col-lg-3 py-5 order-md-last">
-	          <div class="heading-section ftco-animate">
-	          	<span class="subheading">What we do</span>
-	            <h2 class="mb-4">Equity in STEM</h2>
-	            <p>Through both local and international initiatives, our goal is to bring STEM education to those who don't have access to it. We teach curriculum relevant to ages 7 all the way through 16. Some of our past curriculum deployments include topics involving LEGO Robotics, Renewable Energies, VEX Robotics and more. </p>
-	            <!-- <p><a href="#" class="btn btn-primary py-3 px-4">Get a Quote</a></p> -->
-	          </div>
-    			</div>
-    			<div class="col-lg-9 services-wrap px-4 pt-5">
-    				<div class="row pt-md-3">
-    					<div class="col-md-4 d-flex align-items-stretch">
-		    				<div class="services text-center">
-		    					<div class="icon d-flex justify-content-center align-items-center">
-		    						<img class="flaticon-fence" src = "./assets/laptop.png" height = "50px">
-		    					</div>
-		    					<div class="text">
-		    						<h3>Online Classes</h3>
-		    						<p>Providing online classes on a variety of topics for studnets between grades 3 and 8</p>
-		    					</div>
-		    					<a href="#online-class" class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></a>
-		    				</div>
-		    			</div>
-		    			<div class="col-md-4 d-flex align-items-stretch">
-		    				<div class="services text-center">
-		    					<div class="icon d-flex justify-content-center align-items-center">
-		    						<img class="flaticon-lawn-mower" src = "./assets/plane.png" height = "50px">
-		    					</div>
-		    					<div class="text">
-		    						<h3>International Projects</h3>
-		    						<p>Running student and teacher training workshops for schools that don't have access to STEM equipment or resources.</p>
-		    					</div>
-		    					<a href="#" class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></a>
-		    				</div>
-		    			</div>
-		    			<div class="col-md-4 d-flex align-items-stretch">
-		    				<div class="services text-center">
-		    					<div class="icon d-flex justify-content-center align-items-center">
-		    						<img class="flaticon-natural-resources" src = "./assets/price.png" height = "50px">
-		    					</div>
-		    					<div class="text">
-		    						<h3>Fundraising Support</h3>
-		    						<p>Providing financial support to international schools year-long for continuing STEM education</p>
-		    					</div>
-		    					<a href="#" class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></a>
-		    				</div>
-		    			</div>
-    				</div>
-    			</div>
-    		</div>
-    	</div>
-    </section>
 
     <section class="ftco-section ftco-no-pt ftco-no-pb bg-light">
     	<div class="container">
@@ -190,41 +121,17 @@
     			<div class="col-md-6 pl-md-5">
     				<div class="row justify-content-start py-5">
 		          <div class="col-md-12 heading-section ftco-animate">
-		          	<a name = "online-class"><span class="subheading">COVID 19 Support</span></a>
-		            <h2 class="mb-4">Online Classes</h2>
-		            <p>Introducing online distance learning from STEM SEED! Classes offered can be seen below. Click on any to register and get more information on the class. <br> <strong>Note: Classes in red are full.</strong></p>
+		          	<a name = "online-class"><span class="subheading">Selected Classes</span></a>
+		            <h2 class="mb-4"><?php echo $subjectClass; ?></h2>
+		            <p>Click below to update grades, view contact information or add feedback.</p>
 		            <div class="services-wrap">
-		            	<a href="./intro-to-programming.php" class="<?php checkClassav('Introduction to Programming');?>">Introduction to Programming (Scratch)
-		            		<!-- <div class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></div> -->
-		            	</a>
-		            	<a href="./senior-programming.php" class="<?php checkClassav('Senior Programming');?>">Senior Programming (Python)
-		            		<!-- <div class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></div> -->
-		            	</a>
+		            	<?php
+                  for($x=0;$x<count($classStudentList);$x++)
+                  {
+                    echo("<a href=\"./intro-to-programming.php\" class=\"services-list\">$classStudentList[$x]</a>");
+                  }
 
-                  <a href="./data_structures_algorithms.php" class="<?php checkClassav('Data Structures and Algorithms');?>">Data Structures and Algorithms
-		            		<!-- <div class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></div> -->
-		            	</a>
-
-                  <a href="./coding-contest-prep.php" class="<?php checkClassav('Coding Contest Preperation');?>">Coding Contest Preperation
-		            		<!-- <div class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></div> -->
-		            	</a>
-
-                  <a href="./virtual-robotics.php" class="<?php checkClassav('Virtual Robotics');?>">Virtual Robotics
-		            		<!-- <div class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></div> -->
-		            	</a>
-
-
-		            	<a href="./english.php" class="<?php checkClassav('English');?>">English
-		            		<!-- <div class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></div> -->
-		            	</a>
-		            	<a href="./math.php" class="<?php checkClassav('Mathematics');?>">Mathematics
-		            		<!-- <div class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></div> -->
-		            	</a>
-		            	<a href="./intro-to-business.php" class="<?php checkClassav('Introduction to Business');?>">Introduction to Business
-		            		<!-- <div class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></div> -->
-		            	</a>
-                  <a href="./debate.php" class="<?php checkClassav('Debate and Public Speaking');?>">Debate and Public Speaking
-                  </a>
+                  ?>
 		            </div>
 		          </div>
 		        </div>
@@ -289,131 +196,7 @@
         </div>
     	</div>
     </section> -->
-    <a name = "contact">
-    <section class="ftco-intro bg-primary py-5">
-			<div class="container">
-				<div class="row justify-content-between align-items-center">
-					<div class="col-md-6">
-						<h2>Contact  us</h2>
-						<p>Contact us if you have any comments or questions about the classes above.</p>
-					</div>
-					<div class="col-md-5 text-md-right">
-						<span class="contact-number">team@stemseed.org</span>
-					</div>
-				</div>
-			</div>
-		</section>
-  </a>
 
-
-
-    <section class="ftco-section testimony-section">
-      <div class="container">
-        <div class="row justify-content-center mb-5">
-          <div class="col-md-7 text-center heading-section ftco-animate">
-          	<span class="subheading">Our Team</span>
-            <h2 class="mb-4">Volunteers and Teachers</h2>
-          </div>
-        </div>
-        <div class="row ftco-animate">
-          <div class="col-md-12">
-            <div class="carousel-testimony owl-carousel ftco-owl">
-              <div class="item">
-                <div class="testimony-wrap py-4">
-                  <div class="text">
-                    <div class="d-flex align-items-center">
-                    	<div class="user-img" style="background-image: url(./assets/Zain-headshot.jpeg)"></div>
-                    	<div class="pl-3">
-		                    <p class="name">Zain Lakhani</p>
-		                    <span class="position">CEO and Teacher</span>
-		                  </div>
-	                  </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap py-4">
-                  <div class="text">
-                    <div class="d-flex align-items-center">
-                    	<div class="user-img" style="background-image: url(./assets/sobia-headshot.jpeg)"></div>
-                    	<div class="pl-3">
-		                    <p class="name">Sobia Makhani</p>
-		                    <span class="position">Head of Curriculum Development</span>
-		                  </div>
-	                  </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap py-4">
-                  <div class="text">
-                    <div class="d-flex align-items-center">
-                    	<div class="user-img" style="background-image: url(./assets/ali-lakhani.jpg)"></div>
-                    	<div class="pl-3">
-		                    <p class="name">Ali Lakhani</p>
-		                    <span class="position">Volunteer Teacher</span>
-		                  </div>
-	                  </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap py-4">
-                  <div class="text">
-                    <div class="d-flex align-items-center">
-                    	<div class="user-img" style="background-image: url(./assets/Sanna-headshot.jpeg)"></div>
-                    	<div class="pl-3">
-		                    <p class="name">Sanna Tayabali</p>
-		                    <span class="position">Head of Fundraising and Teacher</span>
-		                  </div>
-	                  </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap py-4">
-                  <div class="text">
-                    <div class="d-flex align-items-center">
-                    	<div class="user-img" style="background-image: url(./assets/0.jpeg)"></div>
-                    	<div class="pl-3">
-		                    <p class="name">Adil Quettawala</p>
-		                    <span class="position">Volunteer Teacher</span>
-		                  </div>
-	                  </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap py-4">
-                  <div class="text">
-                    <div class="d-flex align-items-center">
-                      <div class="user-img" style="background-image: url(./assets/zaynah-headshot.jpeg)"></div>
-                      <div class="pl-3">
-                        <p class="name">Zaynah Bhanji</p>
-                        <span class="position">Volunteer Teacher</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap py-4">
-                  <div class="text">
-                    <div class="d-flex align-items-center">
-                    	<div class="user-img" style="background-image: url(./assets/Carolina-headshot.jpeg)"></div>
-                    	<div class="pl-3">
-		                    <p class="name">Carolina Martinez</p>
-		                    <span class="position">Chief of Marketing and Teacher</span>
-		                  </div>
-	                  </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- <section class="ftco-section bg-light">
       <div class="container">
