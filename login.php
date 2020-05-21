@@ -34,7 +34,12 @@ if ($results = $conn->query($sql)){
           exit();
         }
         else {
-            // echo "Login good";
+          $_SESSION['teacherClasses'] = $teacherClasses;
+          echo $_SESSION['teacherClasses'];
+          $_SESSION['username'] = $username;
+          echo $_SESSION['username'];
+          header("Location: ./student-portal.php");
+          exit();
         }
         return;
       }
