@@ -88,7 +88,7 @@
 		    					</div>
 		    					<div class="text">
 		    						<h3>6 Weeks</h3>
-		    						<p>2 hour sessions <br>Once a week <br><strong>DAY AND TIME TBD</strong><strong><br>Classes begin the week of June 15th</strong></p>
+		    						<p>2 hour sessions <br>Once a week <br><strong>Tuesday 7 - 9 p.m.</strong><strong><br>Classes begin the week of June 15th</strong></p>
 		    					</div>
 		    					<!-- <a href="#" class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></a> -->
 		    				</div>

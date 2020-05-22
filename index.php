@@ -101,6 +101,7 @@
             <li class="nav-item"><a href="#online-class" class="nav-link">Online Classes</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Projects</a></li>
 	          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a href="./portal.php" class="nav-link">Log In</a></li>
 	        </ul>
 	      </div>
 	    </div>
