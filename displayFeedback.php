@@ -111,13 +111,7 @@
                 echo "  <div class=\"col-md-4 d-flex align-items-stretch\">
                     <div class=\"services text-center\">
                       <div class=\"text\">
-                        <h3>$teacherClasses[$x]</h3>
-                        <p>Grade: $classGrade </p>
-                        <form action=\"./viewFeedback.php\" method=\"GET\">
-                          <input type=\"hidden\" name=\"className\" id = \"className\" value=\"$teacherClasses[$x]\">
-                          <input type=\"hidden\" name=\"studentID\" id = \"studentID\" value=\"$username\">
-                          <p><input type = \"submit\" class='btn btn-primary py-3 px-4' value = \"View Feedback\"></p>
-                          </form>
+                      <p>This feature is coming soon!</p>
                       </div>
                     </div>
                   </div>";
