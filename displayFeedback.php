@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <?php session_start(); $teacherClasses = $_SESSION['teacherClasses'];$username = $_SESSION['username']; include './include.php'; ?>
+    <?php session_start(); $subjectClass = $_SESSION['subjectClass'];$username = $_SESSION['username'];$feedbackList = $_SESSION['feedbackList']; include './include.php'; ?>
     <div class="container pt-5 pb-4">
 			<div class="row justify-content-between">
 				<div class="col-md-8 order-md-last">
@@ -73,45 +73,20 @@
     			<div class="col-lg-3 py-5 order-md-last">
 	          <div class="heading-section ftco-animate">
 	          	<span class="subheading">Welcome <?php echo("$username")?></span>
-	            <h2 class="mb-4">My Classes</h2>
+	            <h2 class="mb-4"><?php echo $subjectClass?></h2>
 	          </div>
     			</div>
 
     			<div class="col-lg-9 services-wrap px-4 pt-5">
     				<div class="row pt-md-3">
     				<?php
-              for($x = 0; $x<count($teacherClasses);$x++) {
-
-                $host = "localhost";
-                $dbusername = "stemseed_zain";
-                $dbpassword = "alza1302";
-                $dbname = "stemseed_signupClasses";
-                $classStudentList = array();
-                // Create connection
-                $conn = new mysqli ($host, $dbusername, $dbpassword, $dbname);
-
-                if (mysqli_connect_error()){
-                die('Connect Error ('. mysqli_connect_errno() .') '
-                . mysqli_connect_error());
-                }
-                else{
-                  $sql = "SELECT grade FROM"."`$teacherClasses[$x]`"."WHERE id = '$username'";
-                  if ($results = $conn->query($sql)){
-                    $classGrade = mysqli_fetch_array($results);
-                    $classGrade = $classGrade[0];
-                    // $classList[] =  $classList['name'];
-                    // print_r($classList);
-                  }
-                  else {
-                    echo "no results";
-                  }
-                }
+              for($x = 0; $x<count($feedbackList);$x++) {
 
 
                 echo "  <div class=\"col-md-4 d-flex align-items-stretch\">
                     <div class=\"services text-center\">
                       <div class=\"text\">
-                      <p>This feature is coming soon!</p>
+                      <p>$feedbackList[$x]</p>
                       </div>
                     </div>
                   </div>";
