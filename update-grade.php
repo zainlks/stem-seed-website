@@ -8,6 +8,8 @@ $host = "localhost";
 $dbusername = "stemseed_zain";
 $dbpassword = "alza1302";
 $dbname = "stemseed_signupClasses";
+
+
 // Create connection
 $conn = new mysqli ($host, $dbusername, $dbpassword, $dbname);
 

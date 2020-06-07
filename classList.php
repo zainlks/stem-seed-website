@@ -124,6 +124,7 @@
 		          	<a name = "online-class"><span class="subheading">Selected Classes</span></a>
 		            <h2 class="mb-4"><?php echo $subjectClass; ?></h2>
 		            <p>Click below to update grades, view contact information or add feedback.</p>
+
 		            <div class="services-wrap">
 		            	<?php
                   for($x=0;$x<count($classStudentList);$x++)
@@ -152,13 +153,20 @@
                       }
                     }
                     echo(
-                      "<a class=\"services-list\">
+                      "<a class=\"services-list student-card\">
                       $classStudentList[$x]
                       <form action=\"./update-grade.php\" method=\"POST\">
                       <p>Grade: <input type = \"text\" name=\"newGrade\" id = \"newGrade\" placeholder ='$classGrade'></p>
                         <input type=\"hidden\" name=\"studentName\" id = \"studentName\" value=\"$classStudentList[$x]\">
                         <input type=\"hidden\" name=\"className\" id = \"className\" value=\"$subjectClass\">
                         <input type = \"submit\" class='btn btn-danger py-3 px-4' value = \"Update Grade\">
+                        </form>
+
+                        <form action=\"./add-feedback.php\" method=\"POST\">
+                        <input type=\"hidden\" name=\"studentName\" id = \"studentName\" value=\"$classStudentList[$x]\">
+                        <input type=\"hidden\" name=\"className\" id = \"className\" value=\"$subjectClass\">
+                        <input type=\"hidden\" name=\"addingFeedback\" id = \"addingFeedback\" value=\"NO\">
+                        <input type = \"submit\" class='btn btn-primary py-3 px-4' value = \"Add Feedback\">
                         </form>
                         </a>"
 

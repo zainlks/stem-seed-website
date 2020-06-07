@@ -936,6 +936,9 @@ pre {
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     max-width: 100%; }
+  .col-md-12 form {
+    display: inline;
+  }
   .order-md-first {
     -webkit-box-ordinal-group: 0;
     -ms-flex-order: -1;
@@ -8558,6 +8561,10 @@ h1, h2, h3, h4, h5,
   .services-list.full-class:hover {
     color: #fff;
     background: #c82333 !important;
+  }
+  .services-wrap .services-list.student-card:hover {
+    color: #000000;
+    background: #fff !important;
   }
 
     @media (max-width: 767.98px) {
