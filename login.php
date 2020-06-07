@@ -24,6 +24,11 @@ if ($results = $conn->query($sql)){
     $returnPassword = $resultArray[1];
 // //if the message is sent successfully print "Mail sent". Otherwise print "Mail failed"
   if($returnPassword == $password) {
+    date_default_timezone_set('Canada/Eastern');
+    $date = date("d/m/Y h:i:s a");
+    $sql = "UPDATE portalLogin SET lastAccessed ="."'$date'"."WHERE id="."'$username'";
+    if($conn->query($sql)){}
+    else{}
     for($x = 3; $x<count($resultArray);$x++) {
       if($resultArray[$x] == NULL) {
         if($resultArray[2] == 10) {
