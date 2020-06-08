@@ -21,7 +21,7 @@ function checkClassav($className) {
                   $classSize = mysqli_fetch_array($results);
                   $classSize = $classSize[0];
               // //if the message is sent successfully print "Mail sent". Otherwise print "Mail failed"
-                if($classSize >= 6) {
+                if($classSize >= 5) {
                   echo "<p><a href='#' class='btn btn-danger py-3 px-4'  onclick=\"return confirm('This class has been completely filled, look out for a new session in June 2020')\">Availability: Full</a></p>";
                 }
                 else {

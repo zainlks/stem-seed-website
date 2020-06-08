@@ -48,7 +48,7 @@
                       $classSize = mysqli_fetch_array($results);
                       $classSize = $classSize[0];
                   // //if the message is sent successfully print "Mail sent". Otherwise print "Mail failed"
-                    if($classSize >= 6) {
+                    if($classSize >= 5) {
                       echo('services-list full-class');
                     }
                     else {
