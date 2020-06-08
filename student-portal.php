@@ -112,12 +112,16 @@
                     <div class=\"services text-center\">
                       <div class=\"text\">
                         <h3>$teacherClasses[$x]</h3>
-                        <p>Grade: $classGrade </p>
+                        <p>Grade: <strong>$classGrade </strong></p>
                         <form action=\"./viewFeedback.php\" method=\"GET\">
                           <input type=\"hidden\" name=\"className\" id = \"className\" value=\"$teacherClasses[$x]\">
                           <input type=\"hidden\" name=\"studentID\" id = \"studentID\" value=\"$username\">
                           <p><input type = \"submit\" class='btn btn-primary py-3 px-4' value = \"View Feedback\"></p>
                           </form>
+                          <form action=\"./viewContent.php\" method=\"GET\">
+                            <input type=\"hidden\" name=\"className\" id = \"className\" value=\"$teacherClasses[$x]\">
+                            <p><input type = \"submit\" class='btn btn-primary py-3 px-4' value = \"View Content\"></p>
+                            </form>
                       </div>
                     </div>
                   </div>";
