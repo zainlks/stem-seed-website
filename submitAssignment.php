@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Intro to Programming</title>
+    <title>Register</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <?php session_start(); $teacherClasses = $_SESSION['teacherClasses'];$username = $_SESSION['username']; include './include.php'; ?>
+
     <div class="container pt-5 pb-4">
 			<div class="row justify-content-between">
 				<div class="col-md-8 order-md-last">
@@ -66,76 +66,131 @@
 	  </nav>
     <!-- END nav -->
 
-
-		<section class="ftco-section ftco-no-pt ftco-no-pb">
-    	<div class="container">
-    		<div class="row">
-    			<div class="col-lg-3 py-5 order-md-last">
-	          <div class="heading-section ftco-animate">
-	          	<span class="subheading">Welcome <?php echo("$username")?></span>
-	            <h2 class="mb-4">My Classes</h2>
-	          </div>
-    			</div>
-
-    			<div class="col-lg-9 services-wrap px-4 pt-5">
-    				<div class="row pt-md-3">
-    				<?php
-              for($x = 0; $x<count($teacherClasses);$x++) {
-
-                $host = "localhost";
-                $dbusername = "stemseed_zain";
-                $dbpassword = "alza1302";
-                $dbname = "stemseed_signupClasses";
-                $classStudentList = array();
-                // Create connection
-                $conn = new mysqli ($host, $dbusername, $dbpassword, $dbname);
-
-                if (mysqli_connect_error()){
-                die('Connect Error ('. mysqli_connect_errno() .') '
-                . mysqli_connect_error());
-                }
-                else{
-                  $sql = "SELECT grade FROM"."`$teacherClasses[$x]`"."WHERE id = '$username'";
-                  if ($results = $conn->query($sql)){
-                    $classGrade = mysqli_fetch_array($results);
-                    $classGrade = $classGrade[0];
-                    // $classList[] =  $classList['name'];
-                    // print_r($classList);
-                  }
-                  else {
-                    echo "no results";
-                  }
-                }
-
-
-                echo "  <div class=\"col-md-4 d-flex align-items-stretch\">
-                    <div class=\"services text-center\">
-                      <div class=\"text\">
-                        <h3>$teacherClasses[$x]</h3>
-                        <p>Grade: <strong>$classGrade </strong></p>
-                        <form action=\"./viewFeedback.php\" method=\"GET\">
-                          <input type=\"hidden\" name=\"className\" id = \"className\" value=\"$teacherClasses[$x]\">
-                          <input type=\"hidden\" name=\"studentID\" id = \"studentID\" value=\"$username\">
-                          <p><input type = \"submit\" class='btn btn-primary py-3 px-4' value = \"View Feedback\"></p>
-                          </form>
-                          <form action=\"./viewContent.php\" method=\"GET\">
-                            <input type=\"hidden\" name=\"className\" id = \"className\" value=\"$teacherClasses[$x]\">
-                            <p><input type = \"submit\" class='btn btn-primary py-3 px-4' value = \"View Content\"></p>
-                            </form>
-                            <form action=\"./submitAssignment.php\" method=\"GET\">
-                              <input type=\"hidden\" name=\"className\" id = \"className\" value=\"$teacherClasses[$x]\">
-                              <p><input type = \"submit\" class='btn btn-primary py-3 px-4' value = \"Submit Assignment\"></p>
-                              </form>
-                      </div>
-                    </div>
-                  </div>";
-              }
-             ?>
-    				</div>
-    			</div>
-    		</div>
-    	</div>
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('assets/registerBG.jpg');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-end justify-content-center">
+          <div class="col-md-9 ftco-animate pb-5 text-center">
+            <h1 class="mb-3 bread">Content Upload</h1>
+            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Upload <i class="ion-ios-arrow-forward"></i></span></p>
+          </div>
+        </div>
+      </div>
     </section>
+
+		<section class="ftco-section bg-light">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-md-12">
+						<div class="wrapper">
+							<!-- <div class="row mb-5">
+								<div class="col-md-3">
+									<div class="dbox w-100 text-center">
+				        		<div class="icon d-flex align-items-center justify-content-center">
+				        			<span class="fa fa-map-marker"></span>
+				        		</div>
+				        		<div class="text">
+					            <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
+					          </div>
+				          </div>
+								</div>
+								<div class="col-md-3">
+									<div class="dbox w-100 text-center">
+				        		<div class="icon d-flex align-items-center justify-content-center">
+				        			<span class="fa fa-phone"></span>
+				        		</div>
+				        		<div class="text">
+					            <p><span>Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
+					          </div>
+				          </div>
+								</div>
+								<div class="col-md-3">
+									<div class="dbox w-100 text-center">
+				        		<div class="icon d-flex align-items-center justify-content-center">
+				        			<span class="fa fa-paper-plane"></span>
+				        		</div>
+				        		<div class="text">
+					            <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+					          </div>
+				          </div>
+								</div>
+								<div class="col-md-3">
+									<div class="dbox w-100 text-center">
+				        		<div class="icon d-flex align-items-center justify-content-center">
+				        			<span class="fa fa-globe"></span>
+				        		</div>
+				        		<div class="text">
+					            <p><span>Website</span> <a href="#">yoursite.com</a></p>
+					          </div>
+				          </div>
+								</div>
+							</div> -->
+							<div class="row no-gutters">
+								<div class="col-md-7">
+									<div class="contact-wrap w-100 p-md-5 p-4">
+										<h3 class="mb-4">Assignment Upload</h3>
+                    <p> Select a file and then click Upload File</p>
+										<div id="form-message-warning" class="mb-4"></div>
+					      		<div id="form-message-success" class="mb-4">
+					            <!-- Your message was sent, thank you! -->
+					      		</div>
+										<form method="POST" action="completeAssignmentUpload.php" enctype="multipart/form-data">
+											<div class="row">
+												<div class="col-md-12">
+													<div class="form-group">
+														<label class="label" for="name">Upload Assignment</label>
+                            <input type = "hidden" name = "className" id = "className" value = "<?php echo(filter_input(INPUT_POST, 'className'));?>">
+														<input type="file" class="form-control" name="contentFile" id="contentFile">
+													</div>
+												</div>
+												<!-- <div class="col-md-12">
+													<div class="form-group">
+														<label class="label" for="#">Message</label>
+														<textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Message"></textarea>
+													</div>
+												</div> -->
+												<div class="col-md-12">
+													<div class="form-group">
+														<input type="submit" value="Upload File" class="btn btn-primary">
+														<div class="submitting"></div>
+													</div>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+								<div class="col-md-5 d-flex align-items-stretch">
+									<div class="info-wrap w-100 p-5 img" style="background-image: url(images/about.jpg);">
+				          </div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+    <!-- <section class="ftco-section ftco-no-pt ftco-no-pb bg-primary">
+      <div class="container">
+        <div class="row d-flex justify-content-center">
+        	<div class="col-lg-8 py-4">
+        		<div class="row">
+		          <div class="col-md-6 ftco-animate d-flex align-items-center">
+		            <h2 class="mb-0" style="color:white; font-size: 24px;">Subcribe to our Newsletter</h2>
+		          </div>
+		          <div class="col-md-6 d-flex align-items-center">
+		            <form action="#" class="subscribe-form">
+		              <div class="form-group d-flex">
+		                <input type="text" class="form-control" placeholder="Enter email address">
+		                <input type="submit" value="Subscribe" class="submit px-3">
+		              </div>
+		            </form>
+		          </div>
+	          </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
 
     <footer class="ftco-footer ftco-bg-dark ftco-section">
       <div class="container">
@@ -145,9 +200,9 @@
               <h2 class="logo"><a href="#">STEM <span>SEED</span></a></h2>
               <p>Helping bridge the STEM gap one step at a time.</p>
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-                <li class="ftco-animate"><a href="https://www.linkedin.com/company/stem-seed"><span class="icon-linkedin "></span></a></li>
-                <li class="ftco-animate"><a href="https://www.facebook.com/pages/category/Nonprofit-Organization/STEM-Seed-104947514202070/"><span class="icon-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="https://www.instagram.com/stemseedorg/"><span class="icon-instagram"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-linkedin "></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
               </ul>
             </div>
           </div>
@@ -155,8 +210,8 @@
             <div class="ftco-footer-widget mb-4 ml-md-5">
               <h2 class="ftco-heading-2">Classes</h2>
               <ul class="list-unstyled">
-                <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Introduction to Programming (Scratch)</a></li>
-                <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Senior Programming (Python)</a></li>
+                <li><a href="./intro-to-programming.html" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Introduction to Programming (Scratch)</a></li>
+                <li><a href="./senior-programming" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Senior Programming (Python)</a></li>
                 <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>English</a></li>
                 <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Mathematics</a></li>
                 <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Introduction to Business</a></li>
@@ -166,29 +221,29 @@
           </div>
           <div class="col-md-6 col-lg">
             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Contact information</h2>
-              <div class="block-23 mb-3">
-                <ul>
-                  <li><span class="icon icon-map-marker"></span><span class="text">Ontario, Canada</span></li>
-                  <li><a href="#"><span class="icon icon-envelope"></span><span class="text">team@stemseed.org</span></a></li>
-                </ul>
-              </div>
+            	<h2 class="ftco-heading-2">Contact information</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">Ontario, Canada</span></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">team@stemseed.org</span></a></li>
+	              </ul>
+	            </div>
             </div>
           </div>
           <!-- <div class="col-md-6 col-lg">
              <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">Business Hours</h2>
               <div class="opening-hours">
-                <h4>Opening Days:</h4>
-                <p class="pl-3">
-                  <span>Monday – Friday : 9am to 20 pm</span>
-                  <span>Saturday : 9am to 17 pm</span>
-                </p>
-                <h4>Vacations:</h4>
-                <p class="pl-3">
-                  <span>All Sunday Days</span>
-                  <span>All Official Holidays</span>
-                </p>
+              	<h4>Opening Days:</h4>
+              	<p class="pl-3">
+              		<span>Monday – Friday : 9am to 20 pm</span>
+              		<span>Saturday : 9am to 17 pm</span>
+              	</p>
+              	<h4>Vacations:</h4>
+              	<p class="pl-3">
+              		<span>All Sunday Days</span>
+              		<span>All Official Holidays</span>
+              	</p>
               </div>
             </div>
           </div> -->
@@ -203,7 +258,6 @@
         </div>
       </div>
     </footer>
-
 
 
   <!-- loader -->
